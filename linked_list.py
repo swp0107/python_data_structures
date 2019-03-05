@@ -76,6 +76,7 @@ print ll.get_position(3).value
 ll.insert(e4,3)
 # Should print 4 now
 print ll.get_position(3).value
+print ll.get_position(4).value
 
 # Test delete
 ll.delete(1)
