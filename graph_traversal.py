@@ -175,11 +175,13 @@ class Graph(object):
         # Your code here
         queue = [node]
         node.visited = True
-        def enqueue (n, q=queue):
+        def enqueue(n, q=queue):
             n.visited = True
             q.append(n)
         def unvisited_outgoing_edge(n, e):
-            return ((e.node_from.value == n.value) and (not e.node_to.visited))
+            return ((e.node_from.value == n.value) and
+                    (not e.node_to.visited))
+        while queue:
             node = queue.pop(0)
             ret_list.append(node.value)
             for e in node.edges:
